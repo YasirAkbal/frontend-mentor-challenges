@@ -48,6 +48,9 @@ html {
     /* Semantic */
     --clr-bg: hsl(0, 0%, 98%);
     --clr-text: hsl(233, 26%, 24%);
+
+    /* Spacing */
+    --spacing-inline: 2em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -139,7 +142,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 6em;
+    padding: 1em var(--spacing-inline);
 }
 
 .header-logo {
@@ -151,34 +154,35 @@ header {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
-    height: 100%;
+    padding: 2em 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: column;
+    gap: 1.5em;
 }
 
 .navigation-link-item {
-    color: #fff;
     text-decoration: none;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 1.125rem;
+    font-weight: 400;
 }
 
 .navigation-link-item a {
     text-decoration: none;
-    color: var(--clr-text);
+    color: var(--clr-blue-950);
 }
 
 .close-nav {
     border: 0;
     background: 0;
-    color: #FFE600;
-    font-weight: 700;
-    font-size: 3rem;
+    color: var(--clr-gray-600);
+    font-weight: 400;
+    font-size: 2rem;
     cursor: pointer;
-    padding: .5em;
+    padding: 0.5em 1em;
     position: absolute;
+    top: 0.5em;
+    right: 0.5em;
 }
 
 .open-nav {
@@ -193,19 +197,26 @@ header {
 
 .navigation {
     position: fixed;
-    width: 100%;
+    width: 70%;
+    max-width: 300px;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 100%;
-    transform: translateX(0);
-    transition: transform 250ms;
-    background-color: black;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    background-color: var(--clr-white);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    padding-top: 4em;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navigation-open {
-    transform: translateX(-100%);
+    transform: translateX(0);
 }
+
 
 /* ===================================
    7. INTRO SECTION
@@ -355,6 +366,10 @@ header {
    11. MEDIA QUERIES - (665px+)
    =================================== */
 @media (min-width: 665px) {
+    :root {
+        --spacing-inline: 4em;
+    }
+
     /* --- Layout --- */
     main {
         display: grid;
@@ -377,7 +392,7 @@ header {
     .why-choose-us-section .section-wrapper,
     .latest-articles-section .section-wrapper,
     .footer-wrapper {
-        padding-inline: 4em;
+        padding-inline: var(--spacing-inline);
     }
 
     .why-choose-us-section,
@@ -394,7 +409,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
-        padding-inline-start: 4em;
+        padding-inline-start: var(--spacing-inline);
         padding-inline-end: 0;
         padding-block: 0;
     }
@@ -480,15 +495,20 @@ header {
     }
 
     header {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
         align-items: center;
-        padding: 1em 6em;
+        padding: 1em var(--spacing-inline);
+    }
+
+    .header-logo {
+        justify-self: start;
     }
 
     .navigation {
         position: initial;
         background-color: #fff;
+        display: contents;
     }
 
     .navigation-links {
@@ -498,6 +518,12 @@ header {
         gap: 2em;
         margin: 0;
         padding: 0;
+        grid-column: 2;
+    }
+
+    .navigation .request-invite-btn {
+        grid-column: 3;
+        justify-self: end;
     }
 
     .navigation-link-item {
@@ -510,69 +536,8 @@ header {
         text-decoration: none;
         color: var(--clr-gray-600);
     }
-}
 
-
-/* ===================================
-   12. MEDIA QUERIES - (1300px+)
-   =================================== */
-@media (min-width: 1300px) {
-    /* --- Layout --- */
-    main {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .section-wrapper {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        padding: 2em 8em;
-    }
-
-    .why-choose-us-section .section-wrapper,
-    .latest-articles-section .section-wrapper,
-    .footer-wrapper {
-        padding-inline: 8em;
-    }
-
-    .why-choose-us-section,
-    .latest-articles-section {
-        padding-block: 4em;
-    }
-
-    /* --- Intro Section --- */
-    .intro-section {
-        max-height: 650px;
-        overflow: hidden;
-    }
-
-    .intro-section .section-wrapper {
-        padding-inline-start: 8em;
-        max-height: 650px;
-    }
-
-    .intro-text-content {
-        min-width: 280px;
-    }
-
-    .image-mockups-wrapper {
-        flex: 1;
-        display: block;
-        background-position: -45% 50%;
-        background-size: 140%;
-    }
-
-    .image-mockups {
-        width: 80%;
-        margin-top: -19%;
-        margin-left: 35%;
-    }
-
-    /* --- Features & Articles --- */
-    .features-container,
-    .articles-container {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-   /* --- Footer --- */
+    /* --- Footer --- */
     .footer-wrapper {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -631,6 +596,67 @@ header {
 }
 
 
-header {
-    border: 2px solid red;
+/* ===================================
+   12. MEDIA QUERIES - (1300px+)
+   =================================== */
+@media (min-width: 1300px) {
+    :root {
+        --spacing-inline: 8em;
+    }
+
+    /* --- Layout --- */
+    main {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .section-wrapper {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 2em var(--spacing-inline);
+    }
+
+    .why-choose-us-section .section-wrapper,
+    .latest-articles-section .section-wrapper,
+    .footer-wrapper {
+        padding-inline: var(--spacing-inline);
+    }
+
+    .why-choose-us-section,
+    .latest-articles-section {
+        padding-block: 4em;
+    }
+
+    /* --- Intro Section --- */
+    .intro-section {
+        max-height: 650px;
+        overflow: hidden;
+    }
+
+    .intro-section .section-wrapper {
+        padding-inline-start: var(--spacing-inline);
+        max-height: 650px;
+    }
+
+    .intro-text-content {
+        min-width: 280px;
+    }
+
+    .image-mockups-wrapper {
+        flex: 1;
+        display: block;
+        background-position: -45% 50%;
+        background-size: 140%;
+    }
+
+    .image-mockups {
+        width: 80%;
+        margin-top: -19%;
+        margin-left: 35%;
+    }
+
+    /* --- Features & Articles --- */
+    .features-container,
+    .articles-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
+

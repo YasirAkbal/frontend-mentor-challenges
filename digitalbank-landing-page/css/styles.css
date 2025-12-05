@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light dark;
+        
+    --clr-primary: hsl(233, 26%, 24%);
+    --clr-bg: hsl(0, 0%, 98%);
+    --clr-text: hsl(233, 26%, 24%);
+
+    --clr-blue-950: hsl(233, 26%, 24%);
+    --clr-green-500: hsl(136, 64%, 51%);
+    --clr-cyan-400: hsl(192, 69%, 51%);
+
+    --clr-gray-600: hsl(233, 8%, 62%);
+    --clr-gray-100: hsl(220, 16%, 96%); 
+    --clr-gray-50: hsl(0, 0%, 98%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-family: 'Public Sans', sans-serif;
+  color: var(--clr-gray-600);
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+    color: var(--clr-blue-950);
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --clr-primary: hsl(0, 0%, 100%);
+      --clr-bg: hsl(233, 26%, 24%);
+      --clr-text: hsl(0, 0%, 100%);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 6em;
+}
+
+.intro-text-content,
+.why-choose-us-section,
+.latest-articles-section {
+    padding: 2em;
+}
+
+.intro-section {
+    text-align: center;
+}
+
+.why-choose-us-section {
+    background-color: var(--clr-gray-100);
+    text-align: center;
+}
+
+.navigation-links {
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-link-item {
+    list-style: none;
+}
+
+.navigation-link-item a {
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+.btn {
+    padding: 0.8em 2.0em;
+}
+
+.request-invite-btn {
+    background-image: linear-gradient(to bottom, var(--clr-green-500), var(--clr-cyan-400));
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--clr-white);
+    font-weight: 500;
+}
+
+.image-mockups-wrapper {
+    background: url('../images/bg-intro-mobile.svg') no-repeat;
+    background-size: cover; 
+    background-position: 100% 45%;
+    overflow: hidden; 
+    display: block;
+    padding-inline: 1em;
+}
+
+.image-mockups {
+    width: 100%;
+    margin-top: -35%; 
+    display: block;
+}
+
+
+.intro-heading {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.intro-paragraph {
+    line-height: initial;
+    margin-block: 1.5em 2em;
+}
+
+.features-container {
+    margin-top: 2.5em;
+    gap: 332px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5em;
+}
+
+.feature-heading {
+    margin-top: 1.5em;
+}
+
+
+.latest-articles-section {
+    text-align: left;
+    background-color: var(--clr-gray-50);
+}
+
+.latest-articles-heading {
+    text-align: center;
+}
+
+.articles-container {
+    margin-top: 2.5em;
+}
+
+.latest-article-item {
+    background-color: var(--clr-white);
+    margin-top: 1.5em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-article-image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.latest-article-text-content {
+    padding: 1.5em 2em;
+}
+
+
+footer {
+    background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding-block: 3em;
+}
+
+footer * {
+    margin: 0;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-media-links > li {
+    list-style: none;
+}
+
+.footer-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    padding: 0;
+}
+
+.footer-link-item {
+    list-style: none;
+    color: var(--clr-white);
+    font-weight: 300;
+}
+
+.footer-link-item a {
+    text-decoration: none;
+}
+
+@media(min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        grid-template-areas: 
+        "header header header header"
+        "intro intro intro intro"
+        "whyChooseUs whyChooseUs whyChooseUs whyChooseUs"
+        "latestArticles latestArticles latestArticles latestArticles"
+        "footer footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    .intro-section {
+        grid-area: intro;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--clr-gray-50);
+        align-items: center;
+    }
+
+    .intro-text-content {
+        flex: 1;
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    .image-mockups-wrapper {
+        flex: 1;
+        overflow: hidden; 
+        display: block;
+        padding-inline: 1em;
+        background: url('../images/bg-intro-desktop.svg') no-repeat;
+        background-position: 10% 43%;
+    }
+
+    .image-mockups {
+        width: 80%;
+        margin-top: -21%;
+        margin-left: 19%;
+    }
+
+    .image-mockups-wrapper {
+        order: 2;
+    }
+
+    .why-choose-us-section {
+        grid-area: whyChooseUs; 
+        text-align: left;
+    }
+
+    .features-container,
+    .articles-container {
+        grid-template-columns: subgrid;
+    }
+
+    .feature-item {
+        align-items: flex-start;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .latest-article-item {
+        margin-top: 0;
+    }
+
+    .latest-articles-section {
+        grid-area: latestArticles;  
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}

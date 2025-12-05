@@ -112,6 +112,13 @@ textarea:not([rows]) {
    =================================== */
 .btn {
     padding: 0.8em 2.0em;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
 }
 
 .request-invite-btn {
@@ -145,9 +152,18 @@ header {
     padding: 1em var(--spacing-inline);
 }
 
-.header-logo {
+.header-logo-link,
+.footer-logo-link {
     display: flex;
     align-items: center;
+    transition: opacity 250ms;
+}
+
+.header-logo-link:hover,
+.header-logo-link:focus,
+.footer-logo-link:hover,
+.footer-logo-link:focus {
+    opacity: 0.8;
 }
 
 .navigation-links {
@@ -158,7 +174,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 0.8em;
 }
 
 .navigation-link-item {
@@ -170,6 +186,12 @@ header {
 .navigation-link-item a {
     text-decoration: none;
     color: var(--clr-blue-950);
+    transition: color 250ms;
+}
+
+.navigation-link-item a:hover,
+.navigation-link-item a:focus {
+    color: var(--clr-green-500);
 }
 
 .close-nav {
@@ -193,7 +215,15 @@ header {
     padding: .5em;
     margin-left: auto;
     font-size: 1.5em;
+    transform: scale(1);
+    transition: transform 250ms;
 }
+
+.open-nav:focus,
+.open-nav:hover {
+    transform: scale(1.1);
+    color: var(--clr-green-500);
+}   
 
 .navigation {
     position: fixed;
@@ -315,6 +345,19 @@ header {
     padding: 1.5em 2em;
 }
 
+.latest-article-item a {
+    text-decoration: none;
+}
+
+.latest-article-item a * {
+    transition: color 250ms;
+}
+
+.latest-article-item a:hover *,
+.latest-article-item a:focus * {
+    color: var(--clr-green-500);
+}
+
 /* ===================================
    10. FOOTER
    =================================== */
@@ -343,6 +386,16 @@ header {
     list-style: none;
 }
 
+.social-media-link {
+    display: block;
+    transition: opacity 250ms;
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+    opacity: 0.7;
+}
+
 .footer-link-list {
     display: flex;
     flex-direction: column;
@@ -360,6 +413,12 @@ header {
 .footer-link-item a {
     text-decoration: none;
     opacity: 0.8;
+    transition: opacity 250ms;
+}
+
+.footer-link-item a:hover,
+.footer-link-item a:focus {
+    opacity: 1;
 }
 
 /* ===================================
@@ -545,7 +604,7 @@ header {
         width: 100%;
     }
 
-    .footer-logo {
+    .footer-logo-link {
         grid-column: 1;
         grid-row: 1;
         align-self: start;

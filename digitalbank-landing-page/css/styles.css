@@ -68,8 +68,8 @@ a:not([class]) {
 
 img,
 picture {
+  display: inline-block;
   max-width: 100%;
-  display: block;
 }
 
 input, button,
@@ -144,6 +144,7 @@ header {
     cursor: pointer;
     color: var(--clr-white);
     font-weight: 500;
+    max-width: 250px;
 }
 
 .image-mockups-wrapper {
@@ -174,7 +175,6 @@ header {
 
 .features-container {
     margin-top: 2.5em;
-    gap: 332px;
 }
 
 .feature-item {
@@ -262,80 +262,207 @@ footer * {
     text-decoration: none;
 }
 
-@media(min-width: 600px) {
-    main {
+@media(min-width: 665px) {
+     main {
         display: grid;
-        grid-template-columns: repeat(4, minmax(200px, 1fr));
-        grid-template-areas: 
-        "header header header header"
-        "intro intro intro intro"
-        "whyChooseUs whyChooseUs whyChooseUs whyChooseUs"
-        "latestArticles latestArticles latestArticles latestArticles"
-        "footer footer footer footer";
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    header {
-        grid-area: header;
+    .intro-section,
+    .why-choose-us-section,
+    .latest-articles-section {
+        grid-column: 1 / -1;
     }
 
     .intro-section {
-        grid-area: intro;
+        background-color: var(--clr-gray-50);
+    }
+
+    .intro-section .section-wrapper {
         display: flex;
         justify-content: space-between;
-        background-color: var(--clr-gray-50);
-        align-items: center;
+        align-items: stretch;
+        padding-inline-start: 2em;
+        padding-inline-end: 0;
     }
 
     .intro-text-content {
-        flex: 1;
+        flex: 1 1 40%;
+        min-width: 150px;
+        max-width: 500px;
         text-align: left;
-        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .image-mockups-wrapper {
-        flex: 1;
+        flex: 1 1 60%;
         overflow: hidden; 
-        display: block;
+        display: flex;  
+        justify-content: center;
+        align-items: center;
         padding-inline: 1em;
         background: url('../images/bg-intro-desktop.svg') no-repeat;
         background-position: 10% 43%;
-    }
-
-    .image-mockups {
-        width: 80%;
-        margin-top: -21%;
-        margin-left: 19%;
-    }
-
-    .image-mockups-wrapper {
         order: 2;
     }
 
-    .why-choose-us-section {
-        grid-area: whyChooseUs; 
+    .image-mockups {
+        width: clamp(280px, 35vw, 650px);
+        margin-top: clamp(0%, -15vw, -10%);
+        margin-left: clamp(5%, 10vw, 15%);
+    }
+
+    .section-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 2rem;
+        padding-inline: 2em;
+    }
+
+    .why-choose-us-heading,
+    .why-choose-us-paragraph,
+    .latest-articles-heading {
+        grid-column: 1 / span 2;
         text-align: left;
     }
 
     .features-container,
     .articles-container {
-        grid-template-columns: subgrid;
+        display: grid;
+        grid-column: 1 / -1; 
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 2rem;
+        margin-top: 2.5em;
+        text-align: left;
     }
 
     .feature-item {
-        align-items: flex-start;
-        text-align: left;
+        grid-column: span 1; 
+        display: flex;
+        flex-direction: column;
         margin-top: 0;
+        min-width: 0;
+        align-items: flex-start;
     }
 
     .latest-article-item {
+        grid-column: span 1; 
+        background-color: var(--clr-white);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
         margin-top: 0;
+        min-width: 0;
     }
-
-    .latest-articles-section {
-        grid-area: latestArticles;  
-    }
-
-    footer {
-        grid-area: footer;
+    
+    .latest-article-image {
+        width: 100%;
+        aspect-ratio: 4 / 3; 
+        object-fit: cover;
     }
 }
+
+@media(min-width: 1075px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .intro-section,
+    .why-choose-us-section,
+    .latest-articles-section {
+        grid-column: 1 / -1;
+    }
+
+    .intro-section {
+        background-color: var(--clr-gray-50);
+    }
+
+    .intro-section .section-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding-inline-start: 6em;
+        padding-inline-end: 0;
+    }
+
+    .intro-text-content {
+        flex: 1 1 40%;
+        min-width: 280px;
+        max-width: 500px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image-mockups-wrapper {
+        flex: 1 1 60%;
+        min-width: 300px;
+        overflow: hidden; 
+        display: block;
+        padding-inline: 1em;
+        background: url('../images/bg-intro-desktop.svg') no-repeat;
+        background-position: 10% 43%;
+        order: 2;
+    }
+
+    .image-mockups {
+        width: clamp(280px, 35vw, 650px);
+        margin-top: clamp(-5%, -15vw, -100%);
+        margin-left: clamp(10%, 10vw, 59%);
+    }
+
+    .section-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 2rem;
+        padding-inline: 6em;
+    }
+
+    .why-choose-us-heading,
+    .why-choose-us-paragraph,
+    .latest-articles-heading {
+        grid-column: 1 / span 2;
+        text-align: left;
+    }
+
+    .features-container,
+    .articles-container {
+        display: grid;
+        grid-column: 1 / -1; 
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 2rem;
+        margin-top: 2.5em;
+        text-align: left;
+    }
+
+    .feature-item {
+        grid-column: span 1; 
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        min-width: 0;
+        align-items: flex-start;
+    }
+
+    .latest-article-item {
+        grid-column: span 1; 
+        background-color: var(--clr-white);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        min-width: 0;
+    }
+    
+    .latest-article-image {
+        width: 100%;
+        aspect-ratio: 4 / 3; 
+        object-fit: cover;
+    }
+
+}
+

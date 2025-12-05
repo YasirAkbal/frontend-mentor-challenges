@@ -1,113 +1,140 @@
+/* ===================================
+   1. CSS RESET
+   =================================== */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-:root {
-    color-scheme: light dark;
-        
-    --clr-primary: hsl(233, 26%, 24%);
-    --clr-bg: hsl(0, 0%, 98%);
-    --clr-text: hsl(233, 26%, 24%);
-
-    --clr-blue-950: hsl(233, 26%, 24%);
-    --clr-green-500: hsl(136, 64%, 51%);
-    --clr-cyan-400: hsl(192, 69%, 51%);
-
-    --clr-gray-600: hsl(233, 8%, 62%);
-    --clr-gray-100: hsl(220, 16%, 96%); 
-    --clr-gray-50: hsl(0, 0%, 98%);
-    --clr-white: hsl(0, 0%, 100%);
-}
-
-
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+    box-sizing: border-box;
 }
 
 body, h1, h2, h3, h4, p,
 figure, blockquote, dl, dd {
-  margin-block-end: 0;
+    margin-block-end: 0;
 }
 
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+    list-style: none;
 }
 
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* ===================================
+   2. CSS CUSTOM PROPERTIES
+   =================================== */
+:root {
+    color-scheme: light dark;
+    
+    /* Primary Colors */
+    --clr-primary: hsl(233, 26%, 24%);
+    --clr-green-500: hsl(136, 64%, 51%);
+    --clr-cyan-400: hsl(192, 69%, 51%);
+    
+    /* Neutrals */
+    --clr-blue-950: hsl(233, 26%, 24%);
+    --clr-gray-600: hsl(233, 8%, 62%);
+    --clr-gray-100: hsl(220, 16%, 96%);
+    --clr-gray-50: hsl(0, 0%, 98%);
+    --clr-white: hsl(0, 0%, 100%);
+    
+    /* Semantic */
+    --clr-bg: hsl(0, 0%, 98%);
+    --clr-text: hsl(233, 26%, 24%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-primary: hsl(0, 0%, 100%);
+        --clr-bg: hsl(233, 26%, 24%);
+        --clr-text: hsl(0, 0%, 100%);
+    }
+}
+
+/* ===================================
+   3. BASE & TYPOGRAPHY
+   =================================== */
 body {
-  min-height: 100vh;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  font-size: 1.125rem;
-  font-family: 'Public Sans', sans-serif;
-  color: var(--clr-gray-600);
+    min-height: 100vh;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-size: 1.125rem;
+    font-family: 'Public Sans', sans-serif;
+    color: var(--clr-gray-600);
 }
 
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-h1, h2,
-h3, h4 {
+h1, h2, h3, h4 {
     text-wrap: balance;
     color: var(--clr-blue-950);
     font-weight: 300;
     line-height: 1.3;
 }
 
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
 a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
+    text-decoration-skip-ink: auto;
+    color: currentColor;
 }
 
 img,
 picture {
-  display: inline-block;
-  max-width: 100%;
+    display: inline-block;
+    max-width: 100%;
 }
 
 input, button,
 textarea, select {
-  font-family: inherit;
-  font-size: inherit;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 textarea:not([rows]) {
-  min-height: 10em;
+    min-height: 10em;
 }
 
-:target {
-  scroll-margin-block: 5ex;
+/* ===================================
+   4. COMPONENTS - Buttons
+   =================================== */
+.btn {
+    padding: 0.8em 2.0em;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-      --clr-primary: hsl(0, 0%, 100%);
-      --clr-bg: hsl(233, 26%, 24%);
-      --clr-text: hsl(0, 0%, 100%);
-    }
+.request-invite-btn {
+    background-image: linear-gradient(to bottom, var(--clr-green-500), var(--clr-cyan-400));
+    border: none;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--clr-white);
 }
 
+/* ===================================
+   5. LAYOUT - Section Wrapper
+   =================================== */
+.section-wrapper {
+    padding: 2em;
+}
+
+/* ===================================
+   6. HEADER
+   =================================== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 6em;
-}
-
-.intro-section {
-    text-align: center;
-}
-
-.why-choose-us-section {
-    background-color: var(--clr-gray-100);
-    text-align: center;
 }
 
 .navigation-links {
@@ -126,40 +153,21 @@ header {
     color: var(--clr-text);
 }
 
-.btn {
-    padding: 0.8em 2.0em;
+/* ===================================
+   7. INTRO SECTION
+   =================================== */
+.intro-section {
+    text-align: center;
 }
 
-.request-invite-btn {
-    background-image: linear-gradient(to bottom, var(--clr-green-500), var(--clr-cyan-400));
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    color: var(--clr-white);
-    font-weight: 500;
+.intro-text-content {
+    padding: 2em;
 }
 
 .intro-section .request-invite-btn {
     align-self: center;
     margin-right: auto;
 }
-
-.image-mockups-wrapper {
-    background: url('../images/bg-intro-mobile.svg') no-repeat;
-    background-size: cover; 
-    background-position: 100% 45%;
-    overflow: hidden; 
-    display: block;
-    padding-inline: 1em;
-}
-
-.image-mockups {
-    width: 100%;
-    margin-top: -35%; 
-    display: block;
-}
-
 
 .intro-heading {
     font-size: 2.5rem;
@@ -169,6 +177,29 @@ header {
 .intro-paragraph {
     line-height: initial;
     margin-block: 1.5em 2em;
+}
+
+.image-mockups-wrapper {
+    background: url('../images/bg-intro-mobile.svg') no-repeat;
+    background-size: cover;
+    background-position: 100% 45%;
+    overflow: hidden;
+    display: block;
+    padding-inline: 1em;
+}
+
+.image-mockups {
+    width: 100%;
+    margin-top: -35%;
+    display: block;
+}
+
+/* ===================================
+   8. WHY CHOOSE US SECTION
+   =================================== */
+.why-choose-us-section {
+    background-color: var(--clr-gray-100);
+    text-align: center;
 }
 
 .features-container {
@@ -186,7 +217,9 @@ header {
     margin-top: 1.5em;
 }
 
-
+/* ===================================
+   9. LATEST ARTICLES SECTION
+   =================================== */
 .latest-articles-section {
     text-align: left;
     background-color: var(--clr-gray-50);
@@ -217,7 +250,9 @@ header {
     padding: 1.5em 2em;
 }
 
-
+/* ===================================
+   10. FOOTER
+   =================================== */
 .footer-wrapper {
     background-color: var(--clr-primary);
     display: flex;
@@ -259,30 +294,17 @@ header {
 
 .footer-link-item a {
     text-decoration: none;
-}
-
-.why-choose-us-section .section-wrapper,
-.latest-articles-section .section-wrapper {
-    padding: 2em;
-}
-
-.footer-link-item a {
     opacity: 0.8;
 }
 
-.intro-text-content {
-    padding: 2em;;
-}
-
-
-@media(min-width: 665px) {
-     main {
+/* ===================================
+   11. MEDIA QUERIES - (665px+)
+   =================================== */
+@media (min-width: 665px) {
+    /* --- Layout --- */
+    main {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .intro-text-content {
-        padding-left: 0;
     }
 
     .intro-section,
@@ -291,6 +313,25 @@ header {
         grid-column: 1 / -1;
     }
 
+    .section-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2rem;
+        padding-block: 2em;
+    }
+
+    .why-choose-us-section .section-wrapper,
+    .latest-articles-section .section-wrapper,
+    .footer-wrapper {
+        padding-inline: 4em;
+    }
+
+    .why-choose-us-section,
+    .latest-articles-section {
+        padding-block: 2em;
+    }
+
+    /* --- Intro Section --- */
     .intro-section {
         background-color: var(--clr-gray-50);
     }
@@ -301,12 +342,14 @@ header {
         align-items: stretch;
         padding-inline-start: 4em;
         padding-inline-end: 0;
+        padding-block: 0;
     }
 
     .intro-text-content {
         flex: 1 1 40%;
         min-width: 150px;
         max-width: 500px;
+        padding-left: 0;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -315,8 +358,8 @@ header {
 
     .image-mockups-wrapper {
         flex: 1 1 60%;
-        overflow: hidden; 
-        display: flex;  
+        overflow: hidden;
+        display: flex;
         justify-content: center;
         align-items: center;
         padding-inline: 1em;
@@ -332,24 +375,7 @@ header {
         margin-left: clamp(5%, 10vw, 15%);
     }
 
-    .section-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 2rem;
-        padding-block: 2em;
-    }
-
-    .intro-section .section-wrapper {
-         padding-block: 0;
-    }
-
-    .why-choose-us-section .section-wrapper,
-    .latest-articles-section .section-wrapper,
-    .footer-wrapper {
-        padding-inline: 4em;
-    }
-
-
+    /* --- Why Choose Us Section --- */
     .why-choose-us-heading,
     .why-choose-us-paragraph,
     .latest-articles-heading {
@@ -360,7 +386,7 @@ header {
     .features-container,
     .articles-container {
         display: grid;
-        grid-column: 1 / -1; 
+        grid-column: 1 / -1;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2rem;
         margin-top: 2.5em;
@@ -368,31 +394,27 @@ header {
     }
 
     .feature-item {
-        grid-column: span 1; 
-        display: flex;
-        flex-direction: column;
+        grid-column: span 1;
         margin-top: 0;
         min-width: 0;
         align-items: flex-start;
     }
 
+    /* --- Latest Articles Section --- */
     .latest-article-item {
-        grid-column: span 1; 
-        background-color: var(--clr-white);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
+        grid-column: span 1;
         margin-top: 0;
         min-width: 0;
     }
-    
+
     .latest-article-image {
         width: 100%;
-        aspect-ratio: 4 / 3; 
+        aspect-ratio: 4 / 3;
         object-fit: cover;
     }
 
-   .footer-wrapper {
+    /* --- Footer --- */
+    .footer-wrapper {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-template-rows: auto auto;
@@ -447,23 +469,34 @@ header {
         font-size: 0.875rem;
         font-weight: 500;
     }
-
-    .footer-link-item a {
-        opacity: 0.8;
-    }
-
-    .why-choose-us-section,
-    .latest-articles-section {
-        padding-block: 2em;
-    }
 }
 
-
-@media(min-width: 1300px) {
+/* ===================================
+   12. MEDIA QUERIES - (1300px+)
+   =================================== */
+@media (min-width: 1300px) {
+    /* --- Layout --- */
     main {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
+    .section-wrapper {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 2em 8em;
+    }
+
+    .why-choose-us-section .section-wrapper,
+    .latest-articles-section .section-wrapper,
+    .footer-wrapper {
+        padding-inline: 8em;
+    }
+
+    .why-choose-us-section,
+    .latest-articles-section {
+        padding-block: 4em;
+    }
+
+    /* --- Intro Section --- */
     .intro-section {
         max-height: 650px;
         overflow: hidden;
@@ -491,25 +524,9 @@ header {
         margin-left: 35%;
     }
 
-    .section-wrapper {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        padding: 2em 8em;
-    }
-
-    .why-choose-us-section .section-wrapper,
-    .latest-articles-section .section-wrapper,
-    .footer-wrapper {
-        padding-inline: 8em;
-    }
-
-    .why-choose-us-section,
-    .latest-articles-section {
-        padding-block: 4em;
-    }
-
+    /* --- Features & Articles --- */
     .features-container,
     .articles-container {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
-

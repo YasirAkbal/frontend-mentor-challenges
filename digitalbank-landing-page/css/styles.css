@@ -34,7 +34,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     background-image: linear-gradient(to right, var(--clr-green-500), var(--clr-cyan-400));
-    color: var(--clr-white);
+    color: hsl(0, 0%, 100%);
     padding: 0.75em 1.5em;
     border-radius: 0 0 8px 8px;
     text-decoration: none;
@@ -67,6 +67,9 @@ html {
     --clr-gray-50: hsl(0, 0%, 98%);
     --clr-white: hsl(0, 0%, 100%);
     
+    /* Static colors - don't change with theme */
+    --clr-white-static: hsl(0, 0%, 100%);
+    
     /* Semantic */
     --clr-bg: hsl(0, 0%, 98%);
     --clr-text: hsl(233, 26%, 24%);
@@ -77,9 +80,23 @@ html {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --clr-primary: hsl(0, 0%, 100%);
-        --clr-bg: hsl(233, 26%, 24%);
+        /* Primary - inverted for dark bg */
+        --clr-primary: hsl(233, 26%, 24%);
+        
+        /* Neutrals - inverted */
+        --clr-blue-950: hsl(0, 0%, 100%);
+        --clr-gray-600: hsl(220, 16%, 75%);
+        --clr-gray-100: hsl(233, 20%, 18%);
+        --clr-gray-50: hsl(233, 22%, 14%);
+        --clr-white: hsl(233, 26%, 24%);
+        
+        /* Semantic */
+        --clr-bg: hsl(233, 26%, 14%);
         --clr-text: hsl(0, 0%, 100%);
+        
+        /* Accent colors - slightly brighter for dark mode */
+        --clr-green-500: hsl(136, 65%, 55%);
+        --clr-cyan-400: hsl(192, 70%, 55%);
     }
 }
 
@@ -159,13 +176,11 @@ textarea:not([rows]) {
     border-radius: 50px;
     font-weight: 500;
     cursor: pointer;
-    color: var(--clr-white);
+    color: var(--clr-white-static);
     white-space: nowrap;
 }
 
-header .request-invite-btn {
-    visibility: hidden;
-}
+
 
 /* ===================================
    5. LAYOUT - Section Wrapper
@@ -275,7 +290,7 @@ header {
     right: 0;
     bottom: 0;
     transform: translateX(100%);
-    transition: transform 250ms ease-in-out, visibility 0ms 250ms;
+    transition: transform 250ms ease-in-out;
     background-color: var(--clr-white);
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
     padding-top: 4em;
@@ -283,13 +298,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    visibility: hidden;
 }
 
 .navigation-open {
     transform: translateX(0);
-    visibility: visible;
-    transition: transform 250ms ease-in-out, visibility 0ms;
 }
 
 
@@ -443,15 +455,16 @@ header {
 }
 
 .footer-link-list {
+    display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 1em;
     align-items: center;
     padding: 0;
 }
 
 .footer-link-item {
     list-style: none;
-    color: var(--clr-white);
+    color: var(--clr-white-static);
     font-weight: 300;
 }
 
@@ -464,6 +477,11 @@ header {
 .footer-link-item a:hover,
 .footer-link-item a:focus {
     opacity: 1;
+}
+
+.footer-wrapper p {
+    color: var(--clr-white-static);
+    opacity: 0.8;
 }
 
 /* ===================================
@@ -626,7 +644,6 @@ header {
     }
 
     .navigation .request-invite-btn {
-        visibility: visible;
         grid-column: 3;
         justify-self: end;
     }

@@ -50,7 +50,7 @@ This is **not** a full portfolio - it's a targeted skill development project for
 
 ## 📂 Projects
 
-### ✅ 1. [Digitalbank Landing Page](./01-digitalbank-landing-page)
+### ✅ 1. [Digitalbank Landing Page](./digitalbank-landing-page)
 **Status:** Complete | **Complexity:** Intermediate | **Stack:** HTML5, CSS3, Vanilla JS (minimal)
 
 Enterprise-grade landing page demonstrating modern CSS architecture and accessibility patterns.

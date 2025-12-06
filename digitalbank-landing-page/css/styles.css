@@ -43,7 +43,8 @@ html {
     transition: top 200ms ease-in-out;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
     top: 0;
     outline: 3px solid var(--clr-primary);
     outline-offset: 2px;
@@ -166,7 +167,7 @@ textarea:not([rows]) {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-visible {
     transform: scale(1.1);
 }
 
@@ -217,9 +218,9 @@ header {
 }
 
 .header-logo-link:hover,
-.header-logo-link:focus,
+.header-logo-link:focus-visible,
 .footer-logo-link:hover,
-.footer-logo-link:focus {
+.footer-logo-link:focus-visible {
     opacity: 0.8;
 }
 
@@ -247,7 +248,7 @@ header {
 }
 
 .navigation-link-item a:hover,
-.navigation-link-item a:focus {
+.navigation-link-item a:focus-visible {
     color: var(--clr-green-500);
 }
 
@@ -276,7 +277,7 @@ header {
     transition: transform 250ms;
 }
 
-.open-nav:focus,
+.open-nav:focus-visible,
 .open-nav:hover {
     transform: scale(1.1);
     color: var(--clr-green-500);
@@ -473,7 +474,7 @@ header {
 }
 
 .social-media-link:hover,
-.social-media-link:focus {
+.social-media-link:focus-visible {
     opacity: 0.7;
 }
 
@@ -498,7 +499,7 @@ header {
 }
 
 .footer-link-item a:hover,
-.footer-link-item a:focus {
+.footer-link-item a:focus-visible {
     opacity: 1;
 }
 

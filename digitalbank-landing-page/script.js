@@ -4,8 +4,10 @@ const nav = document.querySelector('.navigation');
 
 closeButton.addEventListener("click", () => {
     nav.classList.remove('navigation-open');
+    openButton.setAttribute('aria-expanded', 'false');
 }); 
 
 openButton.addEventListener("click", () => {
     nav.classList.add('navigation-open');
+    openButton.setAttribute('aria-expanded', 'true');
 }); 

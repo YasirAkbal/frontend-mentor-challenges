@@ -27,6 +27,12 @@ html {
     scroll-margin-block: 5ex;
 }
 
+/* AAA Touch Target - 44x44px minimum */
+a,
+button {
+    min-height: 44px;
+}
+
 /* Skip Link - Accessibility */
 .skip-link {
     position: absolute;
@@ -171,6 +177,11 @@ textarea:not([rows]) {
     transform: scale(1.1);
 }
 
+.btn:focus-visible {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 3px;
+}
+
 .request-invite-btn {
     background-image: linear-gradient(to bottom, var(--clr-green-500), var(--clr-cyan-400));
     border: none;
@@ -224,6 +235,13 @@ header {
     opacity: 0.8;
 }
 
+.header-logo-link:focus-visible,
+.footer-logo-link:focus-visible {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 .navigation-links {
     display: flex;
     list-style: none;
@@ -245,11 +263,20 @@ header {
     text-decoration: none;
     color: var(--clr-blue-950);
     transition: color 250ms;
+    display: inline-block;
+    padding: 0.5em;
+    min-width: 44px;
 }
 
 .navigation-link-item a:hover,
 .navigation-link-item a:focus-visible {
     color: var(--clr-green-500);
+}
+
+.navigation-link-item a:focus-visible {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .close-nav {
@@ -260,9 +287,16 @@ header {
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5em 1em;
+    min-width: 44px;
     position: absolute;
     top: 0.5em;
     right: 0.5em;
+}
+
+.close-nav:focus-visible {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .open-nav {
@@ -271,6 +305,7 @@ header {
     color: var(--clr-gray-500);
     cursor: pointer;
     padding: .5em;
+    min-width: 44px;
     margin-left: auto;
     font-size: 1.5em;
     transform: scale(1);
@@ -281,6 +316,12 @@ header {
 .open-nav:hover {
     transform: scale(1.1);
     color: var(--clr-green-500);
+}
+
+.open-nav:focus-visible {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 2px;
+    border-radius: 4px;
 }   
 
 .navigation {
@@ -470,12 +511,21 @@ header {
 
 .social-media-link {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
     transition: opacity 250ms;
 }
 
 .social-media-link:hover,
 .social-media-link:focus-visible {
     opacity: 0.7;
+}
+
+.social-media-link:focus-visible {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .footer-link-list {
@@ -496,11 +546,19 @@ header {
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 250ms;
+    display: inline-block;
+    padding: 0.5em;
 }
 
 .footer-link-item a:hover,
 .footer-link-item a:focus-visible {
     opacity: 1;
+}
+
+.footer-link-item a:focus-visible {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .footer-wrapper p {

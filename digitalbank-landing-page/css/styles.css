@@ -391,6 +391,7 @@ header {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .latest-article-image {
@@ -404,14 +405,36 @@ header {
 
 .latest-article-item a {
     text-decoration: none;
+    position: static;
 }
 
-.latest-article-item a * {
+.latest-article-item a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.latest-article-item:focus-within {
+    outline: 3px solid var(--clr-cyan-400);
+    outline-offset: 2px;
+}
+
+.latest-article-item a:focus {
+    outline: none;
+}
+
+.latest-article-item a {
+    color: inherit;
+}
+
+.latest-article-item a h3 {
     transition: color 250ms;
 }
 
-.latest-article-item a:hover *,
-.latest-article-item a:focus * {
+.latest-article-item:hover a h3,
+.latest-article-item:focus-within a h3 {
     color: var(--clr-green-500);
 }
 

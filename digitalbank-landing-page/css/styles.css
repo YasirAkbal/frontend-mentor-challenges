@@ -27,10 +27,10 @@ html {
     scroll-margin-block: 5ex;
 }
 
-/* AAA Touch Target - 44x44px minimum */
+/* AAA Touch Target - 2.75em (44px) minimum */
 a,
 button {
-    min-height: 44px;
+    min-height: 2.75em;
 }
 
 /* Skip Link - Accessibility */
@@ -266,7 +266,7 @@ header {
     transition: color 250ms;
     display: inline-block;
     padding: 0.5em;
-    min-width: 44px;
+    min-width: 2.75em;
 }
 
 .navigation-link-item a:hover,
@@ -288,7 +288,7 @@ header {
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5em 1em;
-    min-width: 44px;
+    min-width: 2.75em;
     position: absolute;
     top: 0.5em;
     right: 0.5em;
@@ -306,7 +306,7 @@ header {
     color: var(--clr-gray-500);
     cursor: pointer;
     padding: .5em;
-    min-width: 44px;
+    min-width: 2.75em;
     margin-left: auto;
     font-size: 1.5em;
     transform: scale(1);
@@ -328,7 +328,7 @@ header {
 .navigation {
     position: fixed;
     width: 70%;
-    max-width: 300px;
+    max-width: 18.75em;
     top: 0;
     right: 0;
     bottom: 0;
@@ -514,7 +514,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 44px;
+    min-width: 2.75em;
     transition: opacity 250ms;
 }
 
@@ -621,8 +621,8 @@ header {
 
     .intro-text-content {
         flex: 1 1 40%;
-        min-width: 150px;
-        max-width: 500px;
+        min-width: 9.375em;
+        max-width: 31.25em;
         padding-left: 0;
         text-align: left;
         display: flex;
@@ -639,12 +639,12 @@ header {
         padding-inline: 1em;
         background: url('../images/bg-intro-desktop.svg') no-repeat;
         background-position: 10% 43%;
-        background-size: clamp(300px, 80vw, 1000px);
+        background-size: clamp(18.75em, 80vw, 62.5em);
         order: 2;
     }
 
     .image-mockups {
-        width: clamp(280px, 35vw, 650px);
+        width: clamp(17.5em, 35vw, 40.625em);
         margin-top: clamp(0%, -15vw, -10%);
         margin-left: clamp(5%, 10vw, 15%);
     }

@@ -34,14 +34,12 @@
         <div class="flex items-center justify-between h-16 px-6 lg:h-32">
           <div class="flex items-center gap-x-4">
             <button
-              class="block lg:hidden hover:bg-orange hover:text-white transition-colors duration-200 rounded p-2 focus:outline focus:outline-2 focus:outline-orange"
+              class="block lg:hidden hover:bg-orange hover:text-white transition-colors duration-200 rounded p-2 focus-outline"
               aria-label="Open navigation menu"
             >
               &#9776;
             </button>
-            <a
-              href="#"
-              class="focus:outline focus:outline-2 focus:outline-orange"
+            <a href="#" class="focus-outline"
               ><img src="./images/logo.svg" alt="Sneaker Company Logo"
             /></a>
 
@@ -51,39 +49,21 @@
             >
               <ul class="flex items-center gap-x-10">
                 <li>
-                  <a
-                    href="#"
-                    class="hover:text-orange transition-colors duration-200 focus:outline focus:outline-2 focus:outline-orange"
+                  <a href="#" class="nav-item-hover focus-outline"
                     >Collections</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="hover:text-orange transition-colors duration-200 focus:outline focus:outline-2 focus:outline-orange"
-                    >Men</a
-                  >
+                  <a href="#" class="nav-item-hover focus-outline">Men</a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="hover:text-orange transition-colors duration-200 focus:outline focus:outline-2 focus:outline-orange"
-                    >Women</a
-                  >
+                  <a href="#" class="nav-item-hover focus-outline">Women</a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="hover:text-orange transition-colors duration-200 focus:outline focus:outline-2 focus:outline-orange"
-                    >About</a
-                  >
+                  <a href="#" class="nav-item-hover focus-outline">About</a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="hover:text-orange transition-colors duration-200 focus:outline focus:outline-2 focus:outline-orange"
-                    >Contact</a
-                  >
+                  <a href="#" class="nav-item-hover focus-outline">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -93,14 +73,16 @@
             <img
               src="./images/icon-cart.svg"
               alt="Shopping Cart Icon"
-              class="w-6 hover:scale-110 transition-transform duration-200 cursor-pointer focus:outline focus:outline-2 focus:outline-orange"
+              class="w-6 hover:scale-110 transition-transform duration-200 cursor-pointer focus-outline"
               aria-label="Shopping cart"
+              tabindex="0"
             />
             <img
               src="./images/image-avatar.png"
               alt="User Avatar"
-              class="rounded-full w-6 lg:w-12 hover:scale-110 transition-transform duration-200 cursor-pointer focus:outline focus:outline-2 focus:outline-orange"
+              class="rounded-full w-6 lg:w-12 hover:scale-110 transition-transform duration-200 cursor-pointer focus-outline"
               aria-label="User profile"
+              tabindex="0"
             />
           </div>
         </div>
@@ -118,7 +100,7 @@
         >
           <div class="relative shadow rounded-full">
             <button
-              class="block lg:hidden absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold hover:bg-orange hover:text-white transition-all duration-200 hover:scale-110 focus:outline focus:outline-2 focus:outline-orange"
+              class="block lg:hidden absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold hover:bg-orange hover:text-white transition-all duration-200 hover:scale-110 focus-outline"
               aria-label="Previous product image"
             >
               &#10094;
@@ -126,11 +108,11 @@
             <img
               src="./images/image-product-1.jpg"
               alt="Fall Limited Edition Sneakers - main product image"
-              class="w-full object-cover lg:rounded-xl"
+              class="w-full object-cover lg:rounded-xl focus-outline"
               tabindex="0"
             />
             <button
-              class="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold hover:bg-orange hover:text-white transition-all duration-200 hover:scale-110 focus:outline focus:outline-2 focus:outline-orange"
+              class="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold hover:bg-orange hover:text-white transition-all duration-200 hover:scale-110 focus-outline"
               aria-label="Next product image"
             >
               &#10095;
@@ -141,28 +123,28 @@
             <img
               src="./images/image-product-1-thumbnail.jpg"
               alt="Thumbnail 1"
-              class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
+              class="thumbnail focus-outline"
               aria-label="Select product image 1"
               tabindex="0"
             />
             <img
               src="./images/image-product-2-thumbnail.jpg"
               alt="Thumbnail 2"
-              class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
+              class="thumbnail focus-outline"
               aria-label="Select product image 2"
               tabindex="0"
             />
             <img
               src="./images/image-product-3-thumbnail.jpg"
               alt="Thumbnail 3"
-              class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
+              class="thumbnail focus-outline"
               aria-label="Select product image 3"
               tabindex="0"
             />
             <img
               src="./images/image-product-4-thumbnail.jpg"
               alt="Thumbnail 4"
-              class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
+              class="thumbnail focus-outline"
               aria-label="Select product image 4"
               tabindex="0"
             />
@@ -215,7 +197,7 @@
                 aria-label="Quantity selector"
               >
                 <button
-                  class="hover:bg-blue-dark-grayish hover:text-white transition-colors duration-200 rounded p-2 cursor-pointer focus:outline focus:outline-2 focus:outline-orange"
+                  class="hover:bg-blue-dark-grayish hover:text-white transition-colors duration-200 rounded p-2 cursor-pointer focus-outline"
                   aria-label="Decrease quantity"
                   aria-controls="quantity"
                 >
@@ -225,7 +207,7 @@
                   >0</span
                 >
                 <button
-                  class="hover:bg-blue-dark-grayish hover:text-white transition-colors duration-200 rounded p-2 cursor-pointer focus:outline focus:outline-2 focus:outline-orange"
+                  class="hover:bg-blue-dark-grayish hover:text-white transition-colors duration-200 rounded p-2 cursor-pointer focus-outline"
                   aria-label="Increase quantity"
                   aria-controls="quantity"
                 >
@@ -233,7 +215,7 @@
                 </button>
               </div>
               <button
-                class="bg-orange w-full py-3 rounded-lg mt-4 lg:px-20 h-15 lg:mt-0 hover:bg-orange/80 hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer focus:outline focus:outline-2 focus:outline-orange"
+                class="bg-orange w-full py-3 rounded-lg mt-4 lg:px-20 h-15 lg:mt-0 hover:bg-orange/80 hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer focus-outline"
                 aria-label="Add to cart"
               >
                 <div class="flex items-center justify-center gap-x-4">

@@ -123,14 +123,3 @@ open index.html
 No build process needed! Just open `index.html` in your browser.
 
 ---
-
-## 📊 Lighthouse Score
-
-![Lighthouse Score](screenshots/lighthouse.png)
-
-- Performance: X
-- Accessibility: X
-- Best Practices: X
-- SEO: X
-
----

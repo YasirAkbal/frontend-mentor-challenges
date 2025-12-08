@@ -5,7 +5,7 @@ A focused collection of Frontend Mentor challenges to master modern HTML, CSS, a
 <div align="center">
 
 ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=for-the-badge)
-![Projects](https://img.shields.io/badge/Projects-1%2F3-blue?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projects-2%2F3-blue?style=for-the-badge)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -76,10 +76,41 @@ Enterprise-grade landing page demonstrating modern CSS architecture and accessib
 
 ---
 
-### 🚧 2. Coming soon
-**Status:** Next in Queue | **Complexity:** Intermediate | **Stack:** HTML5, Tailwind CSS
+### ✅ 2. [E-commerce Product Page](./ecommerce-product-page)
+**Status:** Complete | **Complexity:** Intermediate | **Stack:** HTML5, Tailwind CSS
 
-Modern e-commerce product card with Tailwind CSS utilities
+Modern e-commerce product page showcasing Tailwind CSS utility-first architecture and component patterns.
+
+**Technical Highlights:**
+
+- 🎨 Tailwind v4 Migration - Latest CSS-first configuration with @import, @theme, @source
+- ♿ Accessibility First - Skip links, ARIA labels, keyboard navigation, live regions
+- 📱 Mobile-First Responsive - Breakpoint-driven layout with lg: utilities for desktop
+- 🎯 Custom Design System - Theme variables for colors and typography via @theme directive
+- ⚡ Component Layer - Reusable .thumbnail, .focus-outline, .nav-item-hover classes
+
+**Engineering Decisions:**
+
+- Tailwind v4 CSS-native configuration for better DX and performance
+- Custom component layer for repeated patterns (thumbnails, focus states)
+- Semantic HTML with proper landmarks (<header>, <main>, <nav>, <figure>)
+- Quantity selector with aria-live="polite" for screen reader feedback
+
+**Design Patterns:**
+
+- Mobile: Stacked layout with image carousel controls
+- Desktop: Two-column grid (image gallery + product details)
+- Interactive thumbnail gallery for desktop (hidden on mobile)
+- Flexible quantity controls with accessible button labels
+
+**Tailwind Techniques:**
+
+- @layer components for extracting repeated utility patterns
+- CSS custom properties via @theme for design tokens
+- Responsive utilities (lg:flex, lg:w-1/2) for layout shifts
+- Utility composition (e.g., flex items-center justify-between)
+- focus: variants for keyboard accessibility
+- hover: and transition-* for smooth interactions
 
 ---
 
@@ -87,60 +118,5 @@ Modern e-commerce product card with Tailwind CSS utilities
 **Status:** Planned | **Complexity:** Advanced | **Stack:** HTML5, Tailwind CSS
 
 Advanced layout challenge to be determined.
-
----
-
-## 🏗️ Technical Approach
-
-### Architecture Principles
-
-**CSS Methodology:**
-- Mobile-first cascade for optimal delivery
-- Modular, component-based organization
-
-**Accessibility Standards:**
-- WCAG AA minimum (targeting AAA where feasible)
-- Semantic HTML as foundation
-- ARIA for enhanced semantics
-- Comprehensive keyboard navigation
-
-**Responsive Design:**
-- Fluid typography using clamp()
-- Container-based breakpoints
-- Touch-friendly interfaces (44px targets)
-- Flexible grid systems
-
----
-
-## 🛠️ Tech Stack & Tools
-
-### Core Technologies
-- **HTML5** - Semantic markup, accessibility features
-- **CSS3** - Grid, Flexbox, Custom Properties, modern selectors
-
-### Development Environment
-- **Git/GitHub** - Version control, collaboration
-- **VS Code** - IDE with extensions (Prettier, ESLint, Tailwind IntelliSense)
-- **Chrome DevTools** - Debugging, performance profiling
-
-## 🎯 Relation to Full-Stack Development
-
-This repository represents **one layer** of full-stack development. The skills developed here directly support:
-
-### Frontend Framework Work
-- **React Components** benefit from strong CSS fundamentals
-- **Styled Components** require deep CSS knowledge
-- **Component Libraries** (Material-UI etc.) are customized through CSS understanding
-- **Design Systems** are built on these foundational principles
-
-### Backend Integration
-- **Server-Side Rendering** requires efficient HTML/CSS
-- **API Documentation** benefits from good UI presentation
-
-### Future Projects
-This foundation will support:
-- React SPA with Java Spring Boot backend
-- Full-stack e-commerce application
-- Content management systems
 
 ---

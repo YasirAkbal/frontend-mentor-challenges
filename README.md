@@ -70,8 +70,8 @@ Enterprise-grade landing page demonstrating modern CSS architecture and accessib
 - Reduced motion support for accessibility
 
 **Metrics:**
-- Lighthouse: 98 Performance, 100 Accessibility, 100 Best Practices
-- Lines of CSS: ~800 (well-organized, commented)
+- Lighthouse: Accessibility 20/21
+- Lines of CSS: ~900 (well-organized, commented)
 - Accessibility: 100% keyboard navigable, full ARIA support
 
 ---

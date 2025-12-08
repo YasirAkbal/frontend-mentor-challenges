@@ -1,7 +1,8 @@
 # 👟 E-commerce Product Page
 > Frontend Mentor Challenge - Intermediate Level
 
-<img />
+<img width="950" height="450" alt="Image" src="https://github.com/user-attachments/assets/d375a56d-2cca-457b-890f-a422e6ae642f" />
+<img width="240" height="430" alt="Image" src="https://github.com/user-attachments/assets/8df3aae6-67f7-48a8-bf51-4a5f5799d182" />
 
 ## 📋 Table of Contents
 - [Overview](#overview)
@@ -22,10 +23,6 @@ Users should be able to:
 - ✅ Switch between product images using thumbnail gallery
 - ✅ Add items to cart with quantity selection
 - ✅ Experience smooth transitions and animations
-
-### Screenshots
-
-<img />
 
 ---
 

@@ -23,6 +23,13 @@ Users should be able to:
 - ✅ Navigate using keyboard only
 - ✅ Experience dark mode support
 
+---
+
+## 🌐 Live Demo
+[Digitalbank-Landing-Page](https://digitalbank-landing-page-yasir-akbal.netlify.app/)  
+
+---
+
 ### Screenshot
 
 <img width="450" height="225" alt="Image" src="https://github.com/user-attachments/assets/94ceb9b8-af3f-4ef6-86eb-17b6dd4ec3a8" />
@@ -121,16 +128,5 @@ open index.html
 ```
 
 No build process needed! Just open `index.html` in your browser.
-
----
-
-## 📊 Lighthouse Score
-
-![Lighthouse Score](screenshots/lighthouse.png)
-
-- Performance: X
-- Accessibility: X
-- Best Practices: X
-- SEO: X
 
 ---

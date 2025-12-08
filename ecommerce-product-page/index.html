@@ -1,44 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Google Fonts - Kumbh Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./dist/output.css" />
 
-  Sneaker Company
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body class="px-0 md:px-24 lg:px-64 font-kumbh">
+    <header>
+      <div class="flex items-center justify-between h-16 px-6 lg:h-32">
+        <div class="flex items-center gap-x-4">
+          <button class="block lg:hidden">&#9776;</button>
+          <img src="./images/logo.svg" alt="Sneaker Company Logo" />
 
-  Fall Limited Edition Sneakers
+          <nav class="hidden lg:block text-blue-dark-grayish ml-15">
+            <ul class="flex items-center gap-x-10">
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+        <div class="flex items-center justify-center gap-x-6">
+          <img
+            src="./images/icon-cart.svg"
+            alt="Shopping Cart Icon"
+            class="w-6"
+          />
+          <img
+            src="./images/image-avatar.png"
+            alt="User Avatar"
+            class="rounded-full w-6"
+          />
+        </div>
+      </div>
+      <hr
+        class="hidden lg:block text-blue-grayish mb-8 opacity-50 rounded-full"
+      />
+    </header>
 
-  $125.00
-  50%
-  $250.00
+    <main class="lg:flex lg:gap-32 lg:items-center lg:justify-center lg:p-16">
+      <figure class="lg:w-[25vw] lg:rounded-xl lg:flex-shrink-0">
+        <div class="relative shadow rounded-full">
+          <button
+            class="block lg:hidden absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold"
+          >
+            &#10094;
+          </button>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product Image"
+            class="w-full object-cover lg:rounded-xl"
+          />
+          <button
+            class="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold"
+          >
+            &#10095;
+          </button>
+        </div>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="hidden lg:flex mt-8 gap-4">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="Thumbnail 1"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+          />
+          <img
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="Thumbnail 2"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+          />
+          <img
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="Thumbnail 3"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+          />
+          <img
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="Thumbnail 4"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+          />
+        </div>
+      </figure>
+
+      <section class="p-4 mb-4 lg:w-[25vw] lg:flex-shrink-0">
+        <div>
+          <p
+            class="text-blue-dark-grayish font-bold uppercase tracking-widest mb-2"
+          >
+            Sneaker Company
+          </p>
+          <h1
+            class="text-3xl font-bold mb-4 capitalize lg:mt-3 lg:text-4xl opacity-85"
+          >
+            Fall Limited Edition Sneakers
+          </h1>
+        </div>
+
+        <div>
+          <p class="mt-5 text-blue-dark-grayish lg:font-medium lg:mt-10">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div
+            class="flex items-center justify-between mt-4 mb-4 lg:flex-col lg:items-start"
+          >
+            <p>
+              <span class="font-semibold text-3xl">$125.00</span>
+              <span
+                class="bg-black text-white px-2 py-1 rounded font-semibold ml-2 lg:ml-4"
+                >50%</span
+              >
+            </p>
+
+            <span class="text-blue-dark-grayish font-bold line-through lg:mt-4"
+              >$250.00</span
+            >
+          </div>
+          <div
+            class="lg:flex lg:gap-x-6 lg:items-center lg:justify-center lg:mt-8"
+          >
+            <div
+              class="w-full flex items-center justify-between bg-blue-light-grayish py-3 px-6 rounded-lg h-15"
+            >
+              <button>
+                <img src="./images/icon-minus.svg" alt="Minus Icon" />
+              </button>
+              <span class="font-bold text-lg">0</span>
+              <button>
+                <img src="./images/icon-plus.svg" alt="Plus Icon" />
+              </button>
+            </div>
+            <button
+              class="bg-orange w-full py-3 rounded-lg mt-4 lg:px-20 h-15 lg:mt-0"
+            >
+              <div class="flex items-center justify-center gap-x-4">
+                <svg
+                  class="w-5 h-5 fill-current text-black fill-black"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  />
+                </svg>
+                <span class="whitespace-nowrap font-bold">Add to cart</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

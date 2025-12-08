@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@source "../*.html";
+
+@theme {
+  /* Primary */
+  --color-orange: hsl(26, 100%, 55%);
+  --color-orange-pale: hsl(25, 100%, 94%);
+
+  /* Neutral */
+  --color-blue-very-dark: hsl(220, 13%, 13%);
+  --color-blue-dark-grayish: hsl(219, 9%, 45%);
+  --color-blue-grayish: hsl(220, 14%, 75%);
+  --color-blue-light-grayish: hsl(223, 64%, 98%);
+
+  /* Font */
+  --font-family-kumbh: "Kumbh Sans", sans-serif;
+}
+

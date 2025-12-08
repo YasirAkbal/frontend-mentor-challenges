@@ -24,6 +24,11 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body class="font-kumbh">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange text-white px-4 py-2 rounded z-50"
+      >Skip to main content</a
+    >
     <div class="container mx-auto">
       <header>
         <div class="flex items-center justify-between h-16 px-6 lg:h-32">
@@ -94,7 +99,7 @@
             <img
               src="./images/image-avatar.png"
               alt="User Avatar"
-              class="rounded-full w-6 hover:scale-110 transition-transform duration-200 cursor-pointer focus:outline focus:outline-2 focus:outline-orange"
+              class="rounded-full w-6 lg:w-12 hover:scale-110 transition-transform duration-200 cursor-pointer focus:outline focus:outline-2 focus:outline-orange"
               aria-label="User profile"
             />
           </div>
@@ -104,7 +109,10 @@
         />
       </header>
 
-      <main class="lg:flex lg:gap-32 lg:items-center lg:justify-center lg:p-16">
+      <main
+        id="main-content"
+        class="lg:flex lg:gap-32 lg:items-center lg:justify-center lg:p-16"
+      >
         <figure
           class="lg:w-1/2 lg:max-w-[500px] lg:rounded-xl lg:flex-shrink-0"
         >
@@ -119,6 +127,7 @@
               src="./images/image-product-1.jpg"
               alt="Fall Limited Edition Sneakers - main product image"
               class="w-full object-cover lg:rounded-xl"
+              tabindex="0"
             />
             <button
               class="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold hover:bg-orange hover:text-white transition-all duration-200 hover:scale-110 focus:outline focus:outline-2 focus:outline-orange"
@@ -134,24 +143,28 @@
               alt="Thumbnail 1"
               class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
               aria-label="Select product image 1"
+              tabindex="0"
             />
             <img
               src="./images/image-product-2-thumbnail.jpg"
               alt="Thumbnail 2"
               class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
               aria-label="Select product image 2"
+              tabindex="0"
             />
             <img
               src="./images/image-product-3-thumbnail.jpg"
               alt="Thumbnail 3"
               class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
               aria-label="Select product image 3"
+              tabindex="0"
             />
             <img
               src="./images/image-product-4-thumbnail.jpg"
               alt="Thumbnail 4"
               class="thumbnail focus:outline focus:outline-2 focus:outline-orange"
               aria-label="Select product image 4"
+              tabindex="0"
             />
           </div>
         </figure>

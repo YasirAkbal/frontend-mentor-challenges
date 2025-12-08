@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,7 +11,6 @@
       href="./images/favicon-32x32.png"
     />
 
-    <!-- Google Fonts - Kumbh Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,16 +27,52 @@
     <header>
       <div class="flex items-center justify-between h-16 px-6 lg:h-32">
         <div class="flex items-center gap-x-4">
-          <button class="block lg:hidden">&#9776;</button>
-          <img src="./images/logo.svg" alt="Sneaker Company Logo" />
+          <button
+            class="block lg:hidden hover:bg-orange hover:text-white transition-colors duration-200 rounded p-2"
+          >
+            &#9776;
+          </button>
+          <a href="#"
+            ><img src="./images/logo.svg" alt="Sneaker Company Logo"
+          /></a>
 
           <nav class="hidden lg:block text-blue-dark-grayish ml-15">
             <ul class="flex items-center gap-x-10">
-              <li><a href="#">Collections</a></li>
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-orange transition-colors duration-200"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-orange transition-colors duration-200"
+                  >Men</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-orange transition-colors duration-200"
+                  >Women</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-orange transition-colors duration-200"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-orange transition-colors duration-200"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -47,12 +81,12 @@
           <img
             src="./images/icon-cart.svg"
             alt="Shopping Cart Icon"
-            class="w-6"
+            class="w-6 hover:scale-110 transition-transform duration-200 cursor-pointer"
           />
           <img
             src="./images/image-avatar.png"
             alt="User Avatar"
-            class="rounded-full w-6"
+            class="rounded-full w-6 hover:scale-110 transition-transform duration-200 cursor-pointer"
           />
         </div>
       </div>
@@ -65,7 +99,7 @@
       <figure class="lg:w-[25vw] lg:rounded-xl lg:flex-shrink-0">
         <div class="relative shadow rounded-full">
           <button
-            class="block lg:hidden absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold"
+            class="block lg:hidden absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold hover:bg-orange hover:text-white transition-all duration-200 hover:scale-110"
           >
             &#10094;
           </button>
@@ -75,7 +109,7 @@
             class="w-full object-cover lg:rounded-xl"
           />
           <button
-            class="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold"
+            class="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 block font-bold hover:bg-orange hover:text-white transition-all duration-200 hover:scale-110"
           >
             &#10095;
           </button>
@@ -85,22 +119,22 @@
           <img
             src="./images/image-product-1-thumbnail.jpg"
             alt="Thumbnail 1"
-            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
           />
           <img
             src="./images/image-product-2-thumbnail.jpg"
             alt="Thumbnail 2"
-            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
           />
           <img
             src="./images/image-product-3-thumbnail.jpg"
             alt="Thumbnail 3"
-            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
           />
           <img
             src="./images/image-product-4-thumbnail.jpg"
             alt="Thumbnail 4"
-            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow"
+            class="rounded-xl flex-1 min-w-0 object-cover h-auto shadow hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
           />
         </div>
       </figure>
@@ -146,16 +180,20 @@
             <div
               class="w-full flex items-center justify-between bg-blue-light-grayish py-3 px-6 rounded-lg h-15"
             >
-              <button>
+              <button
+                class="hover:bg-blue-dark-grayish hover:text-white transition-colors duration-200 rounded p-2 cursor-pointer"
+              >
                 <img src="./images/icon-minus.svg" alt="Minus Icon" />
               </button>
               <span class="font-bold text-lg">0</span>
-              <button>
+              <button
+                class="hover:bg-blue-dark-grayish hover:text-white transition-colors duration-200 rounded p-2 cursor-pointer"
+              >
                 <img src="./images/icon-plus.svg" alt="Plus Icon" />
               </button>
             </div>
             <button
-              class="bg-orange w-full py-3 rounded-lg mt-4 lg:px-20 h-15 lg:mt-0"
+              class="bg-orange w-full py-3 rounded-lg mt-4 lg:px-20 h-15 lg:mt-0 hover:bg-orange/80 hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer"
             >
               <div class="flex items-center justify-center gap-x-4">
                 <svg

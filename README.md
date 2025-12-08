@@ -31,6 +31,12 @@ This is **not** a full portfolio - it's a targeted skill development project for
 
 ---
 
+## 🌐 Live Demos
+[Digitalbank-Landing-Page](https://digitalbank-landing-page-yasir-akbal.netlify.app/)  
+[E-Commerce Product Page](https://e-commerce-product-page-yasir-akbal.netlify.app)
+
+---
+
 ## 🎓 Learning Objectives
 
 ### Core Focus Areas

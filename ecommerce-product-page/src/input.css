@@ -16,3 +16,9 @@
   --font-family-kumbh: "Kumbh Sans", sans-serif;
 }
 
+@layer components {
+  .thumbnail {
+    @apply rounded-xl flex-1 min-w-0 object-cover h-auto shadow hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer;
+  }
+}
+

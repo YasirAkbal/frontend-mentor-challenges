@@ -66,7 +66,7 @@ Enterprise-grade landing page demonstrating modern CSS architecture and accessib
 - 🎨 **CSS Architecture** - Custom properties for theming, BEM-inspired naming, modular structure
 - 🌓 **Theme System** - Dark mode using `prefers-color-scheme` media query
 - 📱 **Responsive Design** - 4 breakpoint system, fluid typography, container queries
-- ⚡ **Performance** - 98+ Lighthouse score, lazy loading, optimized critical path
+- ⚡ **Accessibility** - 95+ Lighthouse score
 - 🎯 **Touch Targets** - AAA compliance (44px minimum)
 
 **Engineering Decisions:**

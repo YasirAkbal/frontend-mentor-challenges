@@ -741,9 +741,14 @@ header {
         text-decoration: none;
         color: var(--clr-gray-600);
     }
+}
 
+/* ===================================
+   12. MEDIA QUERIES - (1220px+)
+   =================================== */
+@media (min-width: 1220px) {
     /* --- Footer --- */
-    .footer-wrapper {
+        .footer-wrapper {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-template-rows: auto auto;
@@ -761,6 +766,7 @@ header {
         grid-row: 2;
         justify-self: start;
         align-self: end;
+        gap: 0px;
     }
 
     .footer-link-list {
@@ -778,7 +784,12 @@ header {
     }
 
     .footer-link-item {
-        line-height: 1;
+        line-height: 1;        
+    }
+
+    .footer-link-item  > a {
+        display: flex;
+        align-items: center;
     }
 
     .footer-wrapper .request-invite-btn {
@@ -791,15 +802,15 @@ header {
 
     .footer-wrapper p {
         grid-column: 4;
-        grid-row: 2;
+        grid-row: 1;
         justify-self: end;
         align-self: end;
         margin-bottom: 0.4em;
         font-size: 0.875rem;
         font-weight: 500;
+        margin-top: 6em;
     }
 }
-
 
 /* ===================================
    12. MEDIA QUERIES - (1300px+)
